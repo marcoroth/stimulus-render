@@ -1,0 +1,12 @@
+{
+  "name": "stimulus-render",
+  "version": "0.1.0",
+  "description": "A playground for Stimulus Render",
+  "license": "MIT",
+  "repository": "https://github.com/marcoroth/stimulus-render",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.0.0",
+    "stimulus": "^3.0.0",
+    "stimulus-render": "^0.1.0"
+  }
+}
