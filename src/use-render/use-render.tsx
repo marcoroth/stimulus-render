@@ -71,12 +71,12 @@ export const useRender = (controller: RenderController, options: RenderOptions =
         controller.__rerender()
       }
     } else {
-      assignments[camelize(`${value}ValueChanged`)] = () => {
+      assignments[methodName] = () => {
         controller.__rerender()
       }
     }
 
-    Object.assign(controller, {...assignments})
+    Object.assign(controller, assignments)
   })
 
   controller.__render()
