@@ -63,7 +63,7 @@ export const useRender = (controller: RenderController, options: RenderOptions =
     const methodName = camelize(`${value}ValueChanged`)
     const originalMethod = method(controller, methodName)
 
-    const assignments: { [key: string]: any } = {}
+    const assignments: { [key: string]: Function } = {}
 
     if (originalMethod) {
       assignments[methodName] = (...params: any) => {
