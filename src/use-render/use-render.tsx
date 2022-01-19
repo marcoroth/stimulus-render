@@ -66,8 +66,8 @@ export const useRender = (controller: RenderController, options: RenderOptions =
     const assignments: { [key: string]: any } = {}
 
     if (originalMethod) {
-      assignments[methodName] = (currentValue: any, previousValue: any) => {
-        originalMethod.call(controller, currentValue, previousValue)
+      assignments[methodName] = (...params: any) => {
+        originalMethod.call(controller, ...params)
         controller.__rerender()
       }
     } else {
