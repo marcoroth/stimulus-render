@@ -10,7 +10,15 @@
   <body>
     <div data-controller="no-render"></div><br/>
 
-    <div data-controller="list"></div><br/>
+    <div data-controller="hello-world"></div><br/>
+
+    <div data-controller="list">
+      <ul>
+        <li data-list-target="item" data-value="# Title 1"></li>
+        <li data-list-target="item" data-value="**Two Bold**"></li>
+        <li data-list-target="item" data-value="[Three Link](https://github.com/marcoroth/stimulus-render)"></li>
+      </ul>
+    </div><br/>
 
     <div data-controller="counter"></div>
     <div data-controller="counter" data-counter-counter-value="10"></div>
