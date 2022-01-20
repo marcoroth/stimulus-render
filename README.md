@@ -68,7 +68,7 @@ import { processMarkdown } from 'some-markdown-rendering-package'
 /** @jsx h */
 
 export default class extends Controller {
-  static tagets = ['item']
+  static targets = ['item']
 
   connect () {
     useRender(this)
