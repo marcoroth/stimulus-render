@@ -1,6 +1,6 @@
 {
   "name": "stimulus-render",
-  "version": "0.1.0",
+  "version": "0.1.0-beta1",
   "description": "Provides a HTML rendering mechanism for Stimulus Controllers",
   "main": "dist/index.js",
   "module": "dist/index.js",
