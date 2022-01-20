@@ -1,14 +1,6 @@
 import { Controller } from '@hotwired/stimulus'
 import { method, camelize } from '../support/index'
-import { render, h } from '@luwes/little-vdom' // @ts-ignore
-
-/** @jsx h */
-
-declare namespace JSX {
-  interface IntrinsicElements {
-    [elemName: string]: any;
-  }
-}
+import { render, h } from '@luwes/little-vdom'
 
 export interface RenderOptions {
   defaultContent?: any

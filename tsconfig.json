@@ -13,6 +13,10 @@
     "noEmit": false,
     "declaration": false,
     "jsx": "react",
-    "jsxFactory": "h"
+    "jsxFactory": "h",
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ]
   }
 }
