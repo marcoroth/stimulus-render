@@ -1,6 +1,7 @@
 import { Controller } from '@hotwired/stimulus'
 import { method, camelize } from '../support/index'
 import { render, h } from '@luwes/little-vdom'
+import { useValues } from './values'
 
 export interface RenderOptions {
   defaultContent?: any
@@ -17,6 +18,8 @@ const defaultOptions: RenderOptions = {
 class RenderController extends Controller {
   declare __render: () => void
   declare __rerender: () => void
+  declare state: () => Object
+  declare values: () => Object
 }
 
 export const useRender = (controller: RenderController, options: RenderOptions = {}) => {
@@ -27,6 +30,8 @@ export const useRender = (controller: RenderController, options: RenderOptions =
     return
   }
 
+  useValues(controller)
+
   const constructor = controller.constructor as any
   // const controllerConnect = controller.connect.bind(controller)
   // const controllerDisconnect = controller.disconnect.bind(controller)
@@ -36,6 +41,7 @@ export const useRender = (controller: RenderController, options: RenderOptions =
   Object.assign(controller, {
     __rerender() {
       this.__render()
+      console.info("re-render", controller.values())
     },
 
     __render() {
