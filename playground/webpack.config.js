@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    bundle: './playground/index.js'
+    bundle: './index.js'
   },
   output: {
     filename: '[name].js',
@@ -10,11 +10,11 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'stimulus-render': path.resolve(__dirname, './dist/index.js')
+      'stimulus-render': path.resolve(__dirname, '../dist/index.js')
     }
   },
   devServer: {
-    contentBase: './playground',
+    contentBase: './',
     watchContentBase: true
   },
   devtool: 'source-map',

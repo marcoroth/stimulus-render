@@ -11,11 +11,11 @@
   "repository": "https://github.com/marcoroth/stimulus-render",
   "sideEffects": false,
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "start": "cd playground && yarn start",
     "prebuild": "yarn clean",
     "build": "tsc --noEmit false --declaration true --emitDeclarationOnly true --outDir dist/types --jsx react && rollup -c",
     "dev": "rollup -wc",
-    "clean": "rimraf dist *.tsbuildinfo coverage",
+    "clean": "rimraf dist",
     "prerelease": "yarn build"
   },
   "peerDependencies": {
@@ -26,27 +26,15 @@
     "@luwes/little-vdom": "^0.3.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-transform-runtime": "^7.11.5",
-    "@babel/preset-modules": "^0.1.4",
-    "@babel/preset-react": "^7.16.7",
     "@hotwired/stimulus": ">=3",
-    "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@rollup/plugin-typescript": "^8.2.5",
     "@types/react-dom": "^17.0.11",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^5.0.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.57.0",
     "rollup-plugin-filesize": "^9.1.1",
     "sourcemap": "^0.1.0",
-    "style-loader": "^2.0.0",
-    "ts-loader": "^8.0.3",
-    "typescript": "^3.9.7",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "tslib": "^2.3.1",
+    "typescript": "^3.9.7"
   }
 }
