@@ -74,7 +74,7 @@ export default class extends Controller {
     useRender(this)
   }
 
-  renderListTarget(target) {
+  renderItemTarget(target) {
     return (
       <span>
         {processMarkdown(target.dataset.value)}
